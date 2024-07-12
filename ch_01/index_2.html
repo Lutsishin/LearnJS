@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+   
+let x = +prompt ('Введите число' , '');
+let n = +prompt ('Введите в какую степень возвести число?' , '');
+
+function pow(x,n) {
+ let res = x;
+ for (let i = 1 ; i < n ; i++) {
+  res *= x;
+ }
+ return res;
+}
+
+alert (pow(x,n));
+console.log (pow(x,n));
+
+</script>
+</body>
+</html>      
+
