@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script> 
+'use strict';
+
+
+//  финкция возвращает ЕВРОПЕЙСКИЙ день недели
+
+let date = new Date(2024, 7, 18);  // пишем любую дату в формате год, месяц, число
+alert( getLocalDay(date) );       // воскресенье, нужно показать 7
+
+function getLocalDay(date){
+  let day = date.getDay() ;
+  if (day == 0) day = 7;
+  return day;
+
+}
+
+
+</script>
+</body>
+</head>
+</html>

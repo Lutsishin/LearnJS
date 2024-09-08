@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script> 
+'use strict';
+
+
+// Напишите функцию getSecondsToday(), возвращающую количество секунд с начала сегодняшнего дня.
+
+// Например, если сейчас 10:00, и не было перехода на зимнее/летнее время, то:
+// getSecondsToday() == 36000 // (3600 * 10)
+
+function getSecondsToday() {
+  let toDay = new Date ();
+  let toDayBegins = new Date().setHours(0, 0, 0);
+  return (toDay - toDayBegins) / 1000;
+}
+
+// Еще вариант решения
+/*
+function getSecondsToday() {
+  let now = new Date();
+  let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((now - today) / 1000); 
+}
+*/
+
+alert(getSecondsToday());
+
+</script>
+</body>
+</head>
+</html>

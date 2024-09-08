@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script> 
+'use strict';
+
+/*
+Создайте функцию getDateAgo(date, days), возвращающую число, которое было days дней назад от даты date.
+
+К примеру, если сегодня двадцатое число, то getDateAgo(new Date(), 1) вернёт девятнадцатое
+и getDateAgo(new Date(), 2) – восемнадцатое.
+
+Функция должна надёжно работать при значении days=365 и больших значениях:
+*/
+
+let date = new Date(2015, 0, 2);
+
+// вариант решения через вычитание милисекунд (не оптимально)
+/*
+function getDateAgo(date , diff){
+  let newDate = +date - (diff * 24 * 3600 * 1000);
+  return new Date(newDate); // возвращает дату
+}
+*/
+
+// более оптимальный вариант решения
+function getDateAgo(date , diff){
+  let copyDate = new Date(date);
+  copyDate.setDate(date.getDate() - diff);
+  return copyDate.getDate();
+}
+
+alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+
+
+</script>
+</body>
+</head>
+</html>

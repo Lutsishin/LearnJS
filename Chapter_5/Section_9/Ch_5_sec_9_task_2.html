@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script> 
+'use strict';
+
+
+
+
+
+
+let user = {
+  name: 'John',
+  age: 30
+};
+
+function count(obj){
+// первый вариант решения (не оптимальный)
+//  let array = Object.entries(obj);
+//    return  array.length;
+
+// второй вариант решения (оптимальный)    
+  return Object.entries(obj).length;
+};
+
+alert( count(user) ); // 2
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</head>
+</html>

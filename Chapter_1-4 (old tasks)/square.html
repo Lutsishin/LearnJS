@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+'use strict'
+   
+let x = +prompt ('Введите число' , '');
+let n = +prompt ('Введите в какую степень возвести число?' , '');
+
+function pow(x,n) {
+ let res = x;
+ for (let i = 1 ; i < n ; i++) {
+  res *= x;
+ }
+ return res;
+}
+
+console.log (pow(x,n));
+
+if (n >= 1 && n % 1 == 0) {
+  alert( pow(x, n) );
+} else {
+  alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+}
+
+
+
+</script>
+</body>
+</html>      
