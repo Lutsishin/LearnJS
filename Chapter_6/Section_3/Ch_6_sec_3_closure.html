@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script> 
+'use strict';
+
+
+
+// Напишите функцию sum, которая работает таким образом: sum(a)(b) = a+b
+
+const sum = function(a) {
+  return function(b) {
+    return a + b;
+  };
+};
+
+alert(sum(1)(2)); // = 3
+alert(sum(5)(-1)); // = 4
+
+
+</script>
+</body>
+</head>
+</html>

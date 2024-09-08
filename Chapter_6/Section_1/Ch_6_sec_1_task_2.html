@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script> 
+'use strict';
+
+
+//Задача – написать функцию factorial(n), которая возвращает n!, используя рекурсию.
+
+function factorial(n) {
+    if (n == 1){
+        return n;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+
+alert(factorial(1));
+alert(factorial(2));
+alert(factorial(3));
+alert(factorial(4));
+alert(factorial(5));
+alert(factorial(6));
+
+
+
+</script>
+</body>
+</head>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script> 
+'use strict';
+
+// Напишите функцию sumTo(n), которая вычисляет сумму чисел 1 + 2 + ... + n.
+
+// Решение методом РЕКУРСИИ
+/*
+function sumTo(n){
+    if (n == 1){
+        return n;
+    } else {
+        return n + sumTo(n - 1);
+    }
+}
+*/
+
+// Решение в ЦИКЛЕ
+/*
+function sumTo(n){
+    let res = 0;
+    for (let i = 1; i <= n; i++) {
+        res += i;
+    }
+    return res;
+}
+*/ 
+
+// Решение с использованием формулы АРИФМЕТИЧЕСКОЙ ПРОГРЕССИИ
+
+function sumTo(n){
+    return (n * (n + 1)) / 2;
+}
+
+alert(sumTo(1)); 
+alert(sumTo(2));
+alert(sumTo(3)); 
+alert(sumTo(4)); 
+alert(sumTo(100));
+
+</script>
+</body>
+</head>
+</html>
