@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-<body>
-<script> 
-'use strict';
+  <head>
+    <body>
+      <script> 
+      'use strict';
 
 
-let salaries = {
-  "John": 100,
-  "Pete": 300,
-  "Mary": 250
- };
+      let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+      };
 
-/*          // Вариант решения
-function topSalary(salaries) {
-  let array = Object.entries(salaries); // ДЕСТРУКТУРИЗАЦИЯ
-  let cash = null;
-  let name; 
+      /*          // Вариант решения
+      function topSalary(salaries) {
+        let array = Object.entries(salaries); // ДЕСТРУКТУРИЗАЦИЯ
+        let cash = null;
+        let name; 
 
-  for (let item of array) {
-       
-    if (item[1] >= cash) {
-      cash = item[1];
-      name = item[0];
-    }
+        for (let item of array) {
+            
+          if (item[1] >= cash) {
+            cash = item[1];
+            name = item[0];
+          }
 
-  }
-  if (cash == null) return cash;
-  else return name;
+        }
+        if (cash == null) return cash;
+        else return name;
 
-};
-*/
+      };
+      */
 
-// Еще вариант решения, более оптимальный!
-function topSalary(salaries) {
-  let maxCash = 0;
-  let maxName = null;
+      // Еще вариант решения, более оптимальный!
+      function topSalary(salaries) {
+        let maxCash = 0;
+        let maxName = null;
 
-  for (const [name , cash] of Object.entries(salaries)) {
-    
-    if (maxCash < cash) {
-      maxCash = cash;
-      maxName = name;
-    }
+        for (const [name , cash] of Object.entries(salaries)) {
+          
+          if (maxCash < cash) {
+            maxCash = cash;
+            maxName = name;
+          }
 
-  }
-  return maxName;
-}
+        }
+        return maxName;
+      }
 
-alert(topSalary(salaries));
+      alert(topSalary(salaries));
 
 
-</script>
-</body>
-</head>
+      </script>
+    </body>
+  </head>
 </html>

@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-<body>
-<script> 
-'use strict';
+  <head>
+    <body>
+      <script> 
+      'use strict';
 
-// Создайте функцию getSecondsToTomorrow(), возвращающую количество секунд до завтрашней даты.
-// Например, если сейчас 23:00, то: getSecondsToTomorrow() == 3600
+      // Создайте функцию getSecondsToTomorrow(), возвращающую количество секунд до завтрашней даты.
+      // Например, если сейчас 23:00, то: getSecondsToTomorrow() == 3600
 
-function getSecondsToTomorrow() {
-  let now = new Date();
-  let tomorrow = new Date().setHours(23, 59, 59, 999); // устанавливаем время максимально близкое к концу дня
-  return Math.round((tomorrow - now) / 1000); 
-}
-/* Еще вариант решения
-function getSecondsToTomorrow() {
-  let now = new Date();
+      function getSecondsToTomorrow() {
+        let now = new Date();
+        let tomorrow = new Date().setHours(23, 59, 59, 999); // устанавливаем время максимально близкое к концу дня
+        return Math.round((tomorrow - now) / 1000); 
+      }
+      /* Еще вариант решения
+      function getSecondsToTomorrow() {
+        let now = new Date();
 
-  // завтрашняя дата
-  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+        // завтрашняя дата
+        let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
 
-  let diff = tomorrow - now; // разница в миллисекундах
-  return Math.round(diff / 1000); // преобразуем в секунды
-}
-*/
-alert(getSecondsToTomorrow());
+        let diff = tomorrow - now; // разница в миллисекундах
+        return Math.round(diff / 1000); // преобразуем в секунды
+      }
+      */
+      alert(getSecondsToTomorrow());
 
-</script>
-</body>
-</head>
+      </script>
+    </body>
+  </head>
 </html>

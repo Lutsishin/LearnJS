@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-<body>
-<script> 
-'use strict';
+  <head>
+    <body>
+      <script> 
+      'use strict';
 
 
-// Напишите функцию getLastDayOfMonth(year, month), 
-// возвращающую последнее число месяца. Иногда это 30, 31 или даже февральские 28/29.
-// К примеру, getLastDayOfMonth(2012, 1) = 29 (високосный год, февраль).
+      // Напишите функцию getLastDayOfMonth(year, month), 
+      // возвращающую последнее число месяца. Иногда это 30, 31 или даже февральские 28/29.
+      // К примеру, getLastDayOfMonth(2012, 1) = 29 (високосный год, февраль).
 
-function getLastDayOfMonth(year , month) {
-  return new Date(year, (month + 1) , 0).getDate();
-}
-// загоняю в цикл все месяца года
-for (let i = 0 ; i <= 11 ; i++) {
-  alert(getLastDayOfMonth(2012 , i));
-}
+      function getLastDayOfMonth(year , month) {
+        return new Date(year, (month + 1) , 0).getDate();
+      }
+      // загоняю в цикл все месяца года
+      for (let i = 0 ; i <= 11 ; i++) {
+        alert(getLastDayOfMonth(2012 , i));
+      }
 
 
-</script>
-</body>
-</head>
+      </script>
+    </body>
+  </head>
 </html>

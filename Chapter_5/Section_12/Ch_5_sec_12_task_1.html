@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<body>
-<script> 
-'use strict';
+  <head>
+    <body>
+      <script> 
+      'use strict';
 
-// Преобразуйте user в JSON, затем прочитайте этот JSON в другую переменную.
-let user = {
-  name: "Василий Иванович",
-  age: 35
-};
+      // Преобразуйте user в JSON, затем прочитайте этот JSON в другую переменную.
+      let user = {
+        name: "Василий Иванович",
+        age: 35
+      };
 
-// Первый вариант решения
-user = JSON.stringify(user);
-let obj = JSON.parse(user);
+      // Первый вариант решения
+      user = JSON.stringify(user);
+      let obj = JSON.parse(user);
 
-// Еще вариан решения
-// let obj = JSON.parse(JSON.stringify(user));
+      // Еще вариан решения
+      // let obj = JSON.parse(JSON.stringify(user));
 
-</script>
-</body>
-</head>
+      </script>
+    </body>
+  </head>
 </html>

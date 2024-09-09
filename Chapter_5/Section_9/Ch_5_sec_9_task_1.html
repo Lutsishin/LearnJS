@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<body>
-<script> 
-'use strict';
+  <head>
+    <body>
+      <script> 
+      'use strict';
 
 
+      let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+      };
 
+      function sumSalaries(salaries){
+        let summ = 0;
+        for (let value of Object.values(salaries)){
+          summ += value;
+        }
+        return summ;
 
+      };
 
+      alert( sumSalaries(salaries) ); // 650
 
-let salaries = {
-  "John": 100,
-  "Pete": 300,
-  "Mary": 250
-};
-
-function sumSalaries(salaries){
-  let summ = 0;
-  for (let value of Object.values(salaries)){
-    summ += value;
-  }
-  return summ;
-
-};
-
-alert( sumSalaries(salaries) ); // 650
-
-
-
-
-
-
-
-
-
-
-</script>
-</body>
-</head>
+      </script>
+    </body>
+  </head>
 </html>
